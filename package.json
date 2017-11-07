@@ -1,0 +1,83 @@
+{
+    "name": "phpspec-runner",
+    "displayName": "phpspec Runner",
+    "description": "phpspec Runner is a small extension for speeding up phpspec test execution in Visual Studio Code",
+    "author": "Johannes Pichler",
+    "license": "MIT",
+    "version": "1.0.0",
+    "publisher": "fetzi",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "repository": "https://github.com/fetzi/phpspec-runner",
+    "icon": "icon.png",
+    "activationEvents": [
+        "onLanguage:php",
+        "onCommand:phpspec.runAllTests",
+        "onCommand:runClassTests"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "phpspec.runAllTests",
+                "title": "Run all phpspec tests"
+            },
+            {
+                "command": "phpspec.runClassTests",
+                "title": "Run phpspec tests for class"
+            }
+        ],
+        "configuration": [
+            {
+                "title": "phpspec Configuration",
+                "properties": {
+                    "phpspec.binaryPath": {
+                        "type": "string",
+                        "default": "vendor/bin/phpspec",
+                        "description": "path to phpspec executable"
+                    },
+                    "phpspec.cliArguments": {
+                        "type": "string[]",
+                        "default": [
+                            "--format=dot",
+                            "--no-interaction"
+                        ],
+                        "description": "phpspec cli arguments"
+                    }
+                }
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "phpspec.runAllTests",
+                "key": "ctrl+shift+t",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "phpspec.runClassTests",
+                "key": "ctrl+shift+c",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.5.3",
+        "vscode": "^1.1.5",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "js-yaml": "^3.10.0"
+    }
+}
