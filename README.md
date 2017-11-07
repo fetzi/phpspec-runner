@@ -23,10 +23,10 @@ To execute the phpspec-runner commands open the command palette and type the fol
 
 ## Demo
 
-**Run all phpspec tests:**
+### Run all phpspec tests
 ![Run all phpspec tests](images/phpspec-runner-run-all-tests.gif)
 
-**Run phpspec tests for class:**
+### Run phpspec tests for class
 ![Run phpspec tests for class](images/phpspec-runner-run-class-tests.gif)
 
 ## Configuration
