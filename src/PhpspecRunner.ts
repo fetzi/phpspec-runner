@@ -136,6 +136,8 @@ export class PhpspecRunner {
         relativeFile = relativeFile.replace(path.sep + srcPath, specPrefix);
         relativeFile = relativeFile.replace('.php', 'Spec.php');
 
+        relativeFile = relativeFile.replace('\\', '/');
+
         if (fs.existsSync(baseDir + path.sep + relativeFile)) {
             return relativeFile;
         }

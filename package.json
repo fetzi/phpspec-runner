@@ -4,7 +4,7 @@
     "description": "phpspec Runner is a small extension for speeding up phpspec test execution in Visual Studio Code",
     "author": "Johannes Pichler",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "fetzi",
     "engines": {
         "vscode": "^1.17.0"
