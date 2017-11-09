@@ -8,3 +8,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [1.0.1]
 - Fix bug for spec prefixes with backslashes
+
+## [1.0.2]
+- Allow run all tests keybinding without editor focus
