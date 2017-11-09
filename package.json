@@ -54,8 +54,7 @@
         "keybindings": [
             {
                 "command": "phpspec.runAllTests",
-                "key": "ctrl+shift+t",
-                "when": "editorTextFocus"
+                "key": "ctrl+shift+t"
             },
             {
                 "command": "phpspec.runClassTests",
